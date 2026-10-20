@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17152f">
+  <title>Ujian TKA Matematika SMA 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <div class="brand-mark">∑</div>
+    <div><div class="eyebrow">LATIHAN AKADEMIK • 2026</div><h1>TKA Matematika SMA</h1></div>
+    <div class="top-pill">20 SOAL HOTS</div>
+  </header>
+
+  <main class="shell">
+    <section id="welcome" class="panel welcome-panel">
+      <div class="hero-label"><span class="live-dot"></span> SIMULASI UJIAN</div>
+      <h2>Uji nalar.<br><span>Temukan strategi.</span></h2>
+      <p class="lead">Latihan penalaran matematika untuk mempersiapkan diri menghadapi TKA SMA 2026.</p>
+      <div class="feature-grid">
+        <div class="feature"><span class="feature-icon">◷</span><div><b>60 menit</b><small>Waktu pengerjaan</small></div></div>
+        <div class="feature"><span class="feature-icon">◇</span><div><b>20 soal</b><small>Pilihan ganda</small></div></div>
+        <div class="feature"><span class="feature-icon">✓</span><div><b>Skor otomatis</b><small>Nilai langsung dihitung</small></div></div>
+      </div>
+      <form id="startForm" class="start-form">
+        <label for="studentName">Nama lengkap peserta</label>
+        <input id="studentName" name="studentName" autocomplete="name" maxlength="80" placeholder="Ketik nama lengkap Anda" required>
+        <label for="studentClass">Kelas</label>
+        <input id="studentClass" name="studentClass" maxlength="30" placeholder="Contoh: XII 4" required>
+        <button class="primary-btn" type="submit">Mulai Ujian <span>→</span></button>
+      </form>
+      <p class="notice">Pilih satu jawaban terbaik untuk setiap soal. Setelah ujian dikumpulkan, jawaban tidak dapat diubah pada sesi ini.</p>
+    </section>
+
+    <section id="exam" class="panel exam-panel hidden">
+      <div class="exam-head">
+        <div><div class="eyebrow">SEDANG DIKERJAKAN</div><h2 id="greeting">Semangat mengerjakan!</h2></div>
+        <div class="timer-box"><small>SISA WAKTU</small><strong id="timer">60:00</strong></div>
+      </div>
+      <div class="progress-wrap"><div class="progress-label"><span id="progressText">Soal 1 dari 20</span><span id="answeredText">0 terjawab</span></div><div class="progress-track"><div id="progressBar"></div></div></div>
+      <div class="question-layout">
+        <aside class="question-nav"><h3>NOMOR SOAL</h3><div id="questionGrid"></div><div class="legend"><span class="legend-dot done"></span> Terjawab <span class="legend-dot"></span> Kosong</div></aside>
+        <article class="question-card">
+          <div class="question-meta"><span id="questionTopic" class="topic-tag">ALJABAR</span><span id="questionNumber">SOAL 01</span></div>
+          <h3 id="questionText"></h3>
+          <div id="questionVisual" class="question-visual hidden"></div>
+          <div id="options" class="options"></div>
+          <div class="question-actions"><button id="prevBtn" class="secondary-btn">← Sebelumnya</button><button id="nextBtn" class="primary-btn">Berikutnya →</button></div>
+        </article>
+      </div>
+      <div class="submit-row"><span>Pastikan semua jawaban sudah diperiksa.</span><button id="finishBtn" class="finish-btn">Kumpulkan Ujian</button></div>
+    </section>
+
+    <section id="result" class="panel result-panel hidden">
+      <div class="result-icon">✓</div><div class="eyebrow">UJIAN SELESAI</div>
+      <h2>Hasil latihan Anda</h2><p id="resultName" class="result-name"></p>
+      <div class="score-card"><small>NILAI AKHIR</small><div><strong id="score">0</strong><span>/ 100</span></div><p id="scoreMessage"></p></div>
+      <div class="result-stats"><div><strong id="correctCount">0</strong><span>Jawaban benar</span></div><div><strong id="wrongCount">0</strong><span>Jawaban salah</span></div><div><strong id="blankCount">0</strong><span>Tidak dijawab</span></div></div>
+      <div class="review-heading"><h3>Tinjauan jawaban</h3><p>Gunakan tinjauan ini untuk mengenali bagian yang perlu dipelajari kembali.</p></div>
+      <div id="reviewList" class="review-list"></div>
+      <button id="printBtn" class="secondary-btn print-btn">Cetak hasil / Simpan PDF</button>
+      <p class="footer-note">Guru Dison Linome, S.Pd, Gr.</p>
+    </section>
+    <footer>LATIHAN PERSIAPAN TKA MATEMATIKA SMA 2026 <span>•</span> Guru Dison Linome, S.Pd, Gr.</footer>
+  </main>
+
+  <div id="confirmModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card"><div class="modal-symbol">?</div><h2 id="modalTitle">Kumpulkan ujian sekarang?</h2><p id="modalMessage">Periksa kembali jawaban Anda sebelum mengumpulkan.</p><div class="modal-actions"><button id="cancelFinish" class="secondary-btn">Kembali</button><button id="confirmFinish" class="finish-btn">Ya, kumpulkan</button></div></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
